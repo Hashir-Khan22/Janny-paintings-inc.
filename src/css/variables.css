@@ -1,0 +1,48 @@
+:root {
+  /* Brand Industrial Color Tokens */
+  --color-primary: #F5B700;
+  --color-primary-light: #FFC926;
+  --color-primary-dark: #D49B00;
+  --color-primary-rgb: 245, 183, 0;
+
+  --color-black: #0E0F11;
+  --color-charcoal-900: #141619;
+  --color-charcoal-800: #1C1F24;
+  --color-charcoal-700: #262A30;
+  --color-charcoal-600: #353B44;
+  
+  --color-steel-light: #D8DEE9;
+  --color-steel-muted: #8E98A8;
+  --color-steel-border: #3A404D;
+  --color-white: #FFFFFF;
+
+  --color-safety-accent: #E63946;
+  --color-success: #2A9D8F;
+
+  /* Typography */
+  --font-display: 'Oswald', 'Barlow Condensed', 'Archivo Black', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shadows & Elevation */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --shadow-yellow: 0 0 20px rgba(245, 183, 0, 0.35);
+  --shadow-yellow-inset: inset 0 0 15px rgba(245, 183, 0, 0.25);
+
+  /* Geometry & Borders */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Layout */
+  --container-width: 1240px;
+  --nav-height: 80px;
+  --topbar-height: 40px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
