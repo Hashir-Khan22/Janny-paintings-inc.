@@ -63,8 +63,8 @@ export function initQuoteModal() {
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
     const facilitySelected = quoteModal.querySelector('#facility-options .estimator-option-btn.selected')?.textContent || 'General Industrial Facility';
-    const contactEmail = quoteModal.querySelector('#quote-contact-email')?.value || '';
-    const contactPhone = quoteModal.querySelector('#quote-contact-phone')?.value || '';
+    const contactEmail = quoteModal.querySelector('#quote-contact-email')?.value || quoteModal.querySelector('input[name="email"]')?.value || '';
+    const contactPhone = quoteModal.querySelector('#quote-contact-phone')?.value || quoteModal.querySelector('input[name="phone"]')?.value || '';
 
     closeModal();
     showToast(

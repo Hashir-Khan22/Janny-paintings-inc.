@@ -1156,20 +1156,36 @@
           </div>
 
           <div class="estimator-step">
-            <label class="estimator-step-label">3. Contact &amp; Plant Details</label>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-              <input type="text" class="form-input" id="quote-contact-name" placeholder="Contact Name &amp; Title *" required>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-                <input type="email" class="form-input" id="quote-contact-email" placeholder="Work Email *" required>
-                <input type="tel" class="form-input" id="quote-contact-phone" placeholder="Phone Number *" required>
+            <label class="estimator-step-label">3. Contact &amp; Project Info</label>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="name" class="form-input" id="quote-contact-name" placeholder="Your Name *" required>
               </div>
-              <input type="text" class="form-input" id="quote-facility-location" placeholder="Plant City &amp; State (e.g. Manchester, MD or Richmond, VA)">
+              <div class="form-group">
+                <input type="text" name="company" class="form-input" placeholder="Company / Facility Name *" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" name="email" class="form-input" id="quote-contact-email" placeholder="Email Address *" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" class="form-input" id="quote-contact-phone" placeholder="Phone Number *" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea name="details" class="form-textarea" placeholder="Approximate tank capacity, height, or coating specifications..."></textarea>
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
-            SUBMIT FOR FREE ESTIMATE &rarr;
-          </button>
+          <div class="estimator-actions">
+            <button type="submit" class="btn-estimator-submit">SUBMIT BID REQUEST &rarr;</button>
+            <div class="estimator-trust-row">
+              <span>&#10003; 100% Free On-Site Evaluation</span>
+              <span>&#10003; MSHA &amp; OSHA Part 46 Compliant</span>
+              <span>&#10003; Zero Obligation</span>
+            </div>
+          </div>
         </form>
       </div>
     </div>
