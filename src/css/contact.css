@@ -1,18 +1,19 @@
 /* ==========================================================================
    Janney Painting Inc. - Contact Us Split Section
    High-Contrast Safety Yellow Form (Left) & Industrial Dark Headquarters Card (Right)
+   Tightly Framed Layout with Minimal Empty Gaps
    ========================================================================== */
 
 .contact-section {
   position: relative;
   background-color: #0A0C10;
-  border-top: 2px solid rgba(245, 183, 0, 0.25);
+  border-top: 2px solid #E2E8F0;
 }
 
 .contact-split-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 640px;
+  min-height: auto;
 }
 
 /* ==========================================================================
@@ -23,7 +24,7 @@
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
     linear-gradient(135deg, #F5B700 0%, #EDB000 100%);
-  padding: 5rem 4.5rem;
+  padding: 3rem 3.5rem;
   color: #000000;
   display: flex;
   flex-direction: column;
@@ -34,57 +35,57 @@
 .contact-form-eyebrow {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #000000;
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.25);
-  padding: 0.3rem 0.85rem;
-  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
   align-self: flex-start;
   border-radius: 2px;
 }
 
 .contact-form-title {
   font-family: var(--font-display);
-  font-size: clamp(2.3rem, 3.8vw, 3.2rem);
+  font-size: clamp(2.1rem, 3.5vw, 2.8rem);
   font-weight: 900;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1.15;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .contact-form-accent {
-  width: 70px;
+  width: 60px;
   height: 4px;
   background: #000000;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form-subtitle {
   font-family: var(--font-sans);
-  font-size: 0.98rem;
+  font-size: 0.94rem;
   color: #1A1A1A;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .contact-form .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .contact-form .form-group {
@@ -95,7 +96,7 @@
 .contact-form .form-input,
 .contact-form .form-textarea {
   width: 100%;
-  padding: 0.95rem 1.25rem;
+  padding: 0.85rem 1.15rem;
   background: #FFFFFF;
   border: 2px solid rgba(0, 0, 0, 0.18);
   color: #111111;
@@ -122,26 +123,26 @@
 }
 
 .contact-form .form-textarea {
-  min-height: 125px;
+  min-height: 110px;
   resize: vertical;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 /* Captcha and Submit Row */
 .form-captcha-row {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-top: 0.5rem;
+  gap: 1rem;
+  margin-top: 0.35rem;
 }
 
 .captcha-question {
   background: #000000;
   color: var(--color-primary);
   border: 2px solid #000000;
-  padding: 0.85rem 1.4rem;
+  padding: 0.75rem 1.25rem;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 900;
   letter-spacing: 0.05em;
   display: inline-flex;
@@ -153,11 +154,11 @@
 }
 
 .captcha-input {
-  width: 90px;
-  padding: 0.85rem;
+  width: 85px;
+  padding: 0.75rem;
   text-align: center;
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 900;
   background: #FFFFFF;
   border: 2px solid rgba(0, 0, 0, 0.18);
@@ -175,9 +176,9 @@
   background: #000000;
   color: #FFFFFF;
   border: 2px solid #000000;
-  padding: 0.95rem 2.25rem;
+  padding: 0.85rem 2rem;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -207,7 +208,7 @@
   background-image: 
     radial-gradient(ellipse at 85% 15%, rgba(245, 183, 0, 0.08) 0%, transparent 65%),
     linear-gradient(180deg, #0B0E14 0%, #121722 100%);
-  padding: 5rem 4.5rem;
+  padding: 3rem 3.5rem;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -216,48 +217,48 @@
 }
 
 .contact-info-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .contact-info-eyebrow {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .contact-info-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
   font-weight: 900;
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .contact-info-accent {
-  width: 60px;
+  width: 55px;
   height: 4px;
   background: var(--color-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   box-shadow: 0 0 10px rgba(245, 183, 0, 0.4);
 }
 
 .social-links-bar {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 2rem;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .social-icon-btn {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   color: var(--color-primary);
@@ -278,22 +279,22 @@
 }
 
 .social-icon-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .contact-details-list {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 2.25rem;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-detail-row {
   display: flex;
   align-items: center;
-  gap: 1.15rem;
-  padding: 0.85rem 1rem;
+  gap: 1rem;
+  padding: 0.65rem 0.95rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-left: 3px solid var(--color-primary);
@@ -307,8 +308,8 @@
 }
 
 .contact-detail-icon {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   background: var(--color-primary);
   color: #000000;
   border-radius: 4px;
@@ -320,15 +321,15 @@
 }
 
 .contact-detail-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .contact-detail-text {
   font-family: var(--font-sans);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   color: #E2E8F0;
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .contact-detail-text a {
@@ -345,7 +346,7 @@
 /* Map Embed Container */
 .contact-map-frame {
   width: 100%;
-  height: 220px;
+  height: 175px;
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   overflow: hidden;
@@ -364,9 +365,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.75rem;
+  margin-top: 0.6rem;
   font-family: var(--font-display);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 800;
   color: var(--color-primary);
   text-transform: uppercase;
@@ -393,11 +394,11 @@
 @media (max-width: 768px) {
   .contact-form-col,
   .contact-info-col {
-    padding: 3.5rem 1.75rem;
+    padding: 2.5rem 1.5rem;
   }
   .contact-form .form-row {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.85rem;
   }
   .form-captcha-row {
     flex-wrap: wrap;

@@ -21,7 +21,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'OSHA / MSHA Part 46 Rigging & Confined Space',
       spec4_label: 'Typical Turnaround',
-      spec4_val: '1 to 3 Weeks During Plant Off-Season'
+      spec4_val: '1 to 3 Weeks During Plant Off-Season',
+      link: '/page.html?id=tank-containment-painting'
     },
     'food-processing': {
       tag: 'Hygienic Manufacturing',
@@ -35,7 +36,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'Food Safety Clean Containment & Air Filtration',
       spec4_label: 'Typical Turnaround',
-      spec4_val: 'Weekend & Overnight Plant Shutdown Windows'
+      spec4_val: 'Weekend & Overnight Plant Shutdown Windows',
+      link: '/page.html?id=food-manufacturing'
     },
     'quarries': {
       tag: 'Heavy Aggregate',
@@ -49,7 +51,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'MSHA Part 46 Certified Crews (Every Job)',
       spec4_label: 'Typical Turnaround',
-      spec4_val: 'Scheduled Maintenance Shutdowns'
+      spec4_val: 'Scheduled Maintenance Shutdowns',
+      link: '/page.html?id=quarry-painting'
     },
     'concrete-plants': {
       tag: 'Batch Plants',
@@ -63,7 +66,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'Full Fall-Arrest Staging & OSHA Fall Protection',
       spec4_label: 'Typical Turnaround',
-      spec4_val: '3 to 7 Days'
+      spec4_val: '3 to 7 Days',
+      link: '/page.html?id=concrete-plant-painting'
     },
     'asphalt-plants': {
       tag: 'Thermal Processing',
@@ -77,7 +81,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'Hot-Work & Vapor-Monitored Sandblasting',
       spec4_label: 'Typical Turnaround',
-      spec4_val: 'Rapid Cure Formulations for Zero Plant Delay'
+      spec4_val: 'Rapid Cure Formulations for Zero Plant Delay',
+      link: '/page.html?id=asphalt-plant-painting'
     },
     'water-treatment': {
       tag: 'Municipal & Utilities',
@@ -91,7 +96,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'Confined Space Entry Class 1 / Air Monitoring',
       spec4_label: 'Typical Turnaround',
-      spec4_val: 'Turnkey Phased Tank Drainage Windows'
+      spec4_val: 'Turnkey Phased Tank Drainage Windows',
+      link: '/page.html?id=water-treatment-plants'
     },
     'cement-mills': {
       tag: 'Heavy Mineral',
@@ -105,7 +111,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'MSHA Part 46 & Heavy Equipment Operation',
       spec4_label: 'Typical Turnaround',
-      spec4_val: 'Full Turnaround Season Coordination'
+      spec4_val: 'Full Turnaround Season Coordination',
+      link: '/page.html?id=cement-manufacturing'
     },
     'warehouses': {
       tag: 'Industrial Real Estate',
@@ -119,7 +126,8 @@ export function initMarketsTabs() {
       spec3_label: 'Safety Certification',
       spec3_val: 'OSHA Aerial Platform Certified Riggers',
       spec4_label: 'Typical Turnaround',
-      spec4_val: 'Phased Work By Zone (Zero Distribution Interruption)'
+      spec4_val: 'Phased Work By Zone (Zero Distribution Interruption)',
+      link: '/page.html?id=factory-and-warehouse-painting'
     }
   };
 
@@ -132,11 +140,12 @@ export function initMarketsTabs() {
       tabButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Update card content
       const tagEl = displayCard.querySelector('.market-display-tag');
+      const eyebrowEl = displayCard.querySelector('.market-body-eyebrow');
       const titleEl = displayCard.querySelector('.market-display-title');
       const descEl = displayCard.querySelector('.market-display-desc');
       const imgEl = displayCard.querySelector('.market-display-img');
+      const ctaBtn = displayCard.querySelector('.btn-market-page');
       const s1Label = displayCard.querySelector('#spec-1-label');
       const s1Val = displayCard.querySelector('#spec-1-val');
       const s2Label = displayCard.querySelector('#spec-2-label');
@@ -146,14 +155,19 @@ export function initMarketsTabs() {
       const s4Label = displayCard.querySelector('#spec-4-label');
       const s4Val = displayCard.querySelector('#spec-4-val');
 
-      displayCard.style.opacity = '0.5';
+      displayCard.style.opacity = '0.35';
+      displayCard.style.transform = 'scale(0.995)';
       setTimeout(() => {
         if (tagEl) tagEl.textContent = data.tag;
+        if (eyebrowEl) eyebrowEl.textContent = data.tag;
         if (titleEl) titleEl.textContent = data.title;
         if (descEl) descEl.textContent = data.desc;
         if (imgEl) {
           imgEl.src = data.img;
           imgEl.alt = data.title;
+        }
+        if (ctaBtn && data.link) {
+          ctaBtn.href = data.link;
         }
         if (s1Label && s1Val) { s1Label.textContent = data.spec1_label; s1Val.textContent = data.spec1_val; }
         if (s2Label && s2Val) { s2Label.textContent = data.spec2_label; s2Val.textContent = data.spec2_val; }
@@ -161,7 +175,8 @@ export function initMarketsTabs() {
         if (s4Label && s4Val) { s4Label.textContent = data.spec4_label; s4Val.textContent = data.spec4_val; }
 
         displayCard.style.opacity = '1';
-      }, 150);
+        displayCard.style.transform = 'scale(1)';
+      }, 160);
     });
   });
 }
