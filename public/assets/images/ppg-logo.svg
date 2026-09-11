@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="100%" height="100%">
+  <g transform="translate(15, 12)">
+    <!-- PPG Shield Square -->
+    <rect x="0" y="5" width="46" height="46" rx="10" fill="#0072B8"/>
+    <text x="23" y="38" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">PPG</text>
+    
+    <!-- PAINTS Text -->
+    <text x="60" y="38" font-family="'Oswald', 'Impact', sans-serif" font-size="32" font-weight="800" fill="#23272A" letter-spacing="2">PAINTS™</text>
+  </g>
+</svg>

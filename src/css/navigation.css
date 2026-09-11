@@ -106,9 +106,10 @@
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.15rem;
+  gap: 0.85rem;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .nav-item {
@@ -117,23 +118,24 @@
 
 .nav-link {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   color: #E2E8F0;
-  padding: 0.75rem 0.25rem;
+  padding: 0.65rem 0.2rem;
   position: relative;
   transition: color var(--transition-fast);
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.3rem;
+  text-decoration: none;
 }
 
 .nav-link .dropdown-arrow {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--color-primary);
   transition: transform var(--transition-fast);
   line-height: 1;
@@ -142,7 +144,7 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 6px;
+  bottom: 4px;
   left: 0;
   width: 0%;
   height: 2px;
@@ -166,24 +168,36 @@
   transform: rotate(180deg);
 }
 
-/* Industrial Dropdown Menus (Matches User Screenshot Style) */
+/* Modern Industrial Dropdown Menus (Glassmorphic + Yellow Accents) */
 .nav-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
-  background-color: #000000;
-  border-left: 3px solid var(--color-primary);
-  border-top: 1px solid rgba(245, 183, 0, 0.2);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.95), 0 0 15px rgba(245, 183, 0, 0.15);
+  min-width: 290px;
+  max-width: 340px;
+  background: rgba(12, 15, 20, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 183, 0, 0.25);
+  border-top: 3px solid var(--color-primary);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.95), 0 0 20px rgba(245, 183, 0, 0.12);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(8px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1010;
   list-style: none;
-  padding: 0;
+  padding: 0.35rem 0;
   margin: 0;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+/* Smart right-alignment for dropdowns on the right half to prevent screen edge cutoffs */
+.nav-dropdown.dropdown-right,
+.nav-item:nth-last-child(-n+4) .nav-dropdown {
+  left: auto;
+  right: 0;
 }
 
 .nav-item:hover .nav-dropdown {
@@ -193,7 +207,7 @@
 }
 
 .dropdown-item {
-  border-bottom: 1px solid #181818;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .dropdown-item:last-child {
@@ -201,22 +215,39 @@
 }
 
 .dropdown-link {
-  display: block;
-  padding: 0.85rem 1.4rem;
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #CBD5E1;
   text-transform: none;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
+  text-decoration: none;
   transition: all 0.15s ease;
-  line-height: 1.3;
+  line-height: 1.35;
+}
+
+.dropdown-link::after {
+  content: '›';
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.15s ease;
 }
 
 .dropdown-link:hover {
-  background-color: #141414;
+  background-color: rgba(245, 183, 0, 0.1);
   color: #FFFFFF;
-  padding-left: 1.75rem;
+  padding-left: 1.35rem;
+}
+
+.dropdown-link:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Nav Actions */
@@ -486,16 +517,39 @@
 }
 
 /* Responsive Breakpoints for Nav */
-@media (max-width: 1260px) {
+@media (max-width: 1400px) {
   .nav-menu {
-    gap: 0.75rem;
+    gap: 0.65rem;
   }
   .nav-link {
+    font-size: 0.82rem;
+    padding: 0.5rem 0.15rem;
+  }
+  .nav-quote-btn {
+    padding: 0.55rem 1.1rem;
     font-size: 0.85rem;
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1280px) {
+  .nav-menu {
+    gap: 0.45rem;
+  }
+  .nav-link {
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 0.1rem;
+  }
+  .brand-logo img {
+    height: 52px;
+  }
+  .nav-quote-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1180px) {
   .nav-menu {
     display: none;
   }

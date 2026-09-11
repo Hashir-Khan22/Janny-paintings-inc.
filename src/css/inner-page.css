@@ -1,0 +1,925 @@
+/* ==========================================================================
+   Janney Painting Inc. - Modern Inner Page Design System
+   Matches the New Modern Industrial Website UI (Charcoal, Safety Yellow, Oswald & Inter)
+   ========================================================================== */
+
+/* Inner Page Global Body */
+body.inner-page-body {
+  background-color: #0A0C0F;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(245, 183, 0, 0.05) 0%, transparent 60%),
+    linear-gradient(180deg, #0A0C0F 0%, #0D1015 50%, #0A0C0F 100%);
+  color: #E2E8F0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inner Page Hero & Breadcrumbs Section */
+.inner-hero-header {
+  position: relative;
+  background: #0E1117;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 2px, transparent 2px, transparent 8px),
+    radial-gradient(ellipse at 80% 30%, rgba(245, 183, 0, 0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #0A0C0F 0%, #12161F 100%);
+  border-bottom: 2px solid rgba(245, 183, 0, 0.25);
+  padding: 3rem 0 2.5rem;
+}
+
+.inner-hero-header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Breadcrumbs */
+.inner-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94A3B8;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.inner-breadcrumbs a {
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.inner-breadcrumbs a:hover {
+  color: var(--color-primary);
+}
+
+.inner-breadcrumbs .sep {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.inner-breadcrumbs .current {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Category Badge */
+.inner-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(245, 183, 0, 0.12);
+  color: var(--color-primary);
+  border: 1px solid rgba(245, 183, 0, 0.35);
+  padding: 0.3rem 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+/* Page Title */
+.inner-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.inner-title-accent {
+  width: 90px;
+  height: 4px;
+  background: var(--color-primary);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 12px rgba(245, 183, 0, 0.5);
+}
+
+/* Quick Credentials & Contact Row */
+.inner-meta-pills {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: #CBD5E1;
+}
+
+.inner-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.9rem;
+  font-weight: 500;
+}
+
+.inner-pill svg,
+.inner-pill .pill-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.inner-pill a {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.inner-pill a:hover {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Main Two-Column Content Grid
+   ========================================================================== */
+.inner-content-section {
+  padding: 3.5rem 0 5rem;
+}
+
+.inner-content-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.inner-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ==========================================================================
+   Left Column: Primary Service Showcase
+   ========================================================================== */
+.inner-primary-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-width: 0;
+}
+
+/* 1. Hero Feature Card */
+.inner-feature-card {
+  background: #0F1218;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  position: relative;
+}
+
+.inner-feature-media {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.inner-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inner-feature-card:hover .inner-feature-media img {
+  transform: scale(1.03);
+}
+
+.inner-media-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  background: #0A0C0F;
+  border-left: 4px solid var(--color-primary);
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.inner-feature-body {
+  padding: 2.75rem 2.5rem;
+}
+
+.inner-feature-headline {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.inner-feature-headline::before {
+  content: '';
+  width: 5px;
+  height: 28px;
+  background: var(--color-primary);
+  display: inline-block;
+}
+
+.inner-feature-text {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.inner-feature-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-inner-primary {
+  background: var(--color-primary);
+  color: #000000;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-inner-primary:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 20px rgba(245, 183, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-inner-secondary {
+  background: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-inner-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* 2. DEP Compliance & Standards Card */
+.inner-compliance-card {
+  background: #0E1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 5px solid var(--color-primary);
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.compliance-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.compliance-header svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.compliance-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.compliance-desc {
+  font-size: 1rem;
+  color: #94A3B8;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.compliance-checklist-heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compliance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.compliance-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.98rem;
+  color: #E2E8F0;
+  line-height: 1.55;
+}
+
+.compliance-check-icon {
+  width: 22px;
+  height: 22px;
+  background: var(--color-primary);
+  color: #000000;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 3. Interactive Before & After Showcase */
+.inner-showcase-section {
+  background: #0F1218;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.25rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.showcase-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.showcase-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.showcase-toggle-btn {
+  background: rgba(245, 183, 0, 0.15);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.showcase-toggle-btn:hover {
+  background: var(--color-primary);
+  color: #000;
+}
+
+.showcase-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #1E232E;
+  cursor: pointer;
+}
+
+.showcase-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.showcase-img-before {
+  opacity: 0;
+}
+
+.showcase-container:hover .showcase-img-before,
+.showcase-container.show-before .showcase-img-before {
+  opacity: 1;
+}
+
+.showcase-badge-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(10, 12, 15, 0.92);
+  border-left: 3px solid var(--color-primary);
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.showcase-footer-caption {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.showcase-footer-caption strong {
+  color: var(--color-primary);
+}
+
+/* 4. Applications Grid */
+.inner-applications-box {
+  background: #0E1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.25rem;
+}
+
+.applications-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.applications-title::before {
+  content: '';
+  width: 4px;
+  height: 22px;
+  background: var(--color-primary);
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.app-card {
+  background: #131720;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.app-card:hover {
+  border-color: rgba(245, 183, 0, 0.4);
+  transform: translateY(-2px);
+  background: #171C26;
+}
+
+.app-card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.app-card-desc {
+  font-size: 0.88rem;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Right Column: Sticky Action Sidebar
+   ========================================================================== */
+.inner-sidebar-col {
+  position: sticky;
+  top: 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card 1: Request an On-Site Bid */
+.sidebar-bid-card {
+  background: #0E1117;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.sidebar-bid-header {
+  background: var(--color-primary);
+  padding: 1.25rem 1.5rem;
+  color: #000000;
+}
+
+.sidebar-bid-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.15;
+}
+
+.sidebar-bid-subtitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.sidebar-bid-body {
+  padding: 1.5rem;
+}
+
+.sidebar-quick-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-input,
+.sidebar-textarea {
+  width: 100%;
+  background: #141822;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFF;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast);
+}
+
+.sidebar-input:focus,
+.sidebar-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.sidebar-textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.btn-sidebar-submit {
+  background: var(--color-primary);
+  color: #000000;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-sidebar-submit:hover {
+  background: var(--color-primary-light);
+  box-shadow: 0 0 15px rgba(245, 183, 0, 0.4);
+}
+
+.sidebar-call-direct {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.sidebar-call-direct p {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-phone-link {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  transition: color var(--transition-fast);
+}
+
+.sidebar-phone-link:hover {
+  color: #FFFFFF;
+}
+
+/* Card 2: Janney Contractor Credentials */
+.sidebar-cred-card {
+  background: #0E1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--color-primary);
+  padding: 1.5rem;
+}
+
+.cred-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.cred-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #CBD5E1;
+}
+
+.cred-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Card 3: Explore Category Services */
+.sidebar-nav-card {
+  background: #0E1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.sidebar-nav-header {
+  padding: 1rem 1.25rem;
+  background: #141822;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-nav-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sidebar-nav-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-nav-link:hover,
+.sidebar-nav-link.active {
+  background: rgba(245, 183, 0, 0.1);
+  color: var(--color-primary);
+  padding-left: 1.5rem;
+}
+
+/* ==========================================================================
+   Full-Width Modern Strip Banner
+   ========================================================================== */
+.inner-strip-banner {
+  background: #12161F;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(245, 183, 0, 0.04) 0px, rgba(245, 183, 0, 0.04) 15px, transparent 15px, transparent 30px),
+    linear-gradient(90deg, #0A0C0F 0%, #151A24 50%, #0A0C0F 100%);
+  border-top: 2px solid rgba(245, 183, 0, 0.3);
+  border-bottom: 2px solid rgba(245, 183, 0, 0.3);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+}
+
+.inner-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.inner-strip-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-align: left;
+}
+
+.strip-btn {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.strip-btn:hover {
+  background: var(--color-primary);
+  color: #000000;
+  box-shadow: 0 0 20px rgba(245, 183, 0, 0.4);
+}
+
+/* ==========================================================================
+   Partners Strip (Glidden, PPG, Rust-Oleum, Sherwin-Williams)
+   ========================================================================== */
+.inner-partners-strip {
+  background: #FFFFFF;
+  padding: 2.5rem 1.5rem;
+  border-bottom: 2px solid #E2E8F0;
+}
+
+.inner-partners-strip .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partners-strip-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+
+.partners-logos-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.partner-logo-item img {
+  max-height: 52px;
+  width: auto;
+  filter: grayscale(100%) opacity(0.85);
+  transition: all var(--transition-fast);
+}
+
+.partner-logo-item:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .inner-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .inner-sidebar-col {
+    position: static;
+  }
+  .inner-feature-media {
+    height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-hero-header {
+    padding: 2rem 0;
+  }
+  .inner-main-title {
+    font-size: 2rem;
+  }
+  .inner-meta-pills {
+    gap: 0.75rem;
+  }
+  .inner-pill {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.65rem;
+  }
+  .inner-feature-body {
+    padding: 1.75rem 1.25rem;
+  }
+  .inner-compliance-card,
+  .inner-showcase-section,
+  .inner-applications-box {
+    padding: 1.5rem;
+  }
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
+  .showcase-container {
+    height: 280px;
+  }
+  .inner-strip-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .inner-strip-title {
+    text-align: center;
+  }
+}

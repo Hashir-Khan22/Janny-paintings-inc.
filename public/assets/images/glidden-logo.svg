@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="100%" height="100%">
+  <!-- Glidden Ellipse Badge -->
+  <ellipse cx="120" cy="40" rx="105" ry="32" fill="none" stroke="#23272A" stroke-width="7"/>
+  <text x="120" y="49" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-size="34" font-weight="900" fill="#23272A" letter-spacing="-0.5">Glidden</text>
+</svg>
